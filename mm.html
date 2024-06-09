@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 130vh;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      max-width: 100%;
+    }
+    .form-group {
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-top: 3px;
+    }
+    button {
+      background-color: #006ca5;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #00072D;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2> Appointment booking </h2>
+  <form id="applicationForm">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" required placeholder="first-name">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" required placeholder="last-name">
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required placeholder="YYYY-MM-DD" style="color: #aaa;">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="email">
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <select id="city" name="city" required>
+        <option value="">Select City</option>
+        <option value="Astana">Astana</option>
+        <option value="Almaty">Almaty</option>
+        <option value="Qyzylorda">Qyzylorda</option>
+        <option value="Aqtobe">Aktobe</option>
+        <option value="Shymkent">Shymkent</option>
+        <option value="Aqtau">Aqtau</option>
+        <option value="Atyrau">Atyrau</option>
+        <option value="Karaganda">Karaganda</option>
+        <option value="Taraz">Taraz</option>
+        <option value="Petropavl">Petropavl</option>
+
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required placeholder=" phone number">
+    </div>
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="prof">Professional</label>
+      <select id="prof" name="prof" required>
+        <option value="">Select Professional </option>
+        <option value="Therapist">Therapist</option>
+        <option value="Dermotologist">Dermotologist</option>
+        <option value="Cardiologist">Cardiologist</option>
+        <option value="Gastroenterologist">Gastroenterologist</option>
+        <option value="Neurologist">Neurologist</option>
+        <option value="Ophthalmologist">Ophthalmologist</option>
+        <option value="Pediatrician">Pediatrician</option>
+        <option value="Psychiatrist">Psychiatrist</option>
+        <option value="Pulmonologist">Pulmonologist</option>
+        <option value="Urologist">Urologist</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="case">Your case</label>
+      <input type="text" id="case" name="case" required placeholder=" Detailed explanation required">
+    </div>
+    <div>
+    <a href="http://localhost:63342/untitled/privacy%20terms.html?_ijt=40k2je003vbpa6t4n8m0g1v74q&_ij_reload=RELOAD_ON_SAVE" target="_blank"> Privacy Terms</a>
+    </div>
+    <div class="form-group">
+      <input type="checkbox" id="usageConfirmation" name="usageConfirmation" required>
+      <label for="usageConfirmation">I confirm that I have read and agree to the usage of my personal data for the purpose of this application.</label>
+    </div>
+    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+    <button type="submit">Submit Application</button>
+  </form>
+</div>
+
+<script>
+  window.onload = function () {
+    document.getElementById('gender').value = '';
+    document.getElementById('city').value = '';
+    document.getElementById('Professional').value = '';
+  };
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+</script>
+</body>
+</html>

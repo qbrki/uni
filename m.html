@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heartbeat Animation</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .heartbeat {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      animation: heartbeat 1s infinite;
+    }
+
+    .heartbeat::before,
+    .heartbeat::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background-color: #ff6b6b;
+      border-radius: 50px 50px 0 0;
+    }
+
+    .heartbeat::before {
+      left: 50px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heartbeat::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="heartbeat" class="heartbeat"></div>
+
+<script>
+  function createHeartShape() {
+    const heart = document.createElement('div');
+    heart.classList.add('heartbeat');
+    return heart;
+  }
+
+  const heartbeatContainer = document.getElementById('heartbeat');
+  heartbeatContainer.appendChild(createHeartShape());
+</script>
+</body>
+</html>

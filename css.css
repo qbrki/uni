@@ -1,0 +1,90 @@
+body {
+  font-family: Georgia, sans-serif;
+}
+
+header {
+  background-color: #ddeefa;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 17px;
+}
+
+.jumbotron {
+  background-color: #ddeefa;
+  color: #00072D;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+}
+
+.py-5 {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+}
+
+.bg-light {
+  background-color: #ddeefa !important;
+}
+
+.card1 {
+  border: none;
+  transition: transform 0.3s;
+  background-color: white;
+}
+.card {
+  border: none;
+  transition: transform 0.3s;
+  background-color: #ddeefa;
+}
+.card:hover {
+  transform: translateY(5px);
+}
+.card1:hover {
+  transform: translateY(5px);
+}
+footer {
+  color: #102a71;
+}
+
+footer p {
+  margin-bottom: 2px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.doctor-img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
